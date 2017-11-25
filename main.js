@@ -21,8 +21,15 @@ $(document).ready(function() {
           $post.append($content);
 
           let $picture = $('<img>');
-          $picture.attr(src);
+          $picture.attr("src",post.picture);
           $post.append($picture);
+          
+// //IkoYuki [4:20 PM] 
+// $pictureContainer.atphotoContainer("src", $("#PhotoURL").val());
+//   let $row = $("#manyPictures");
+//   $row.append($pictureContainer);
+//   $("#PhotoURL").val("");
+
 
           $postsDiv.append($post);
         }
