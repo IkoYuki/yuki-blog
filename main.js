@@ -20,6 +20,10 @@ $(document).ready(function() {
           $content.text(post.content);
           $post.append($content);
 
+          let $picture = $('<img>');
+          $picture.attr(src);
+          $post.append($picture);
+
           $postsDiv.append($post);
         }
       })
