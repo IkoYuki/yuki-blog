@@ -1,6 +1,9 @@
+use strict;
+
+
 $(document).ready(function() {
 
-  let postsUrl = 'https://raw.githubusercontent.com/babelthuap/hayalab-blog/master/posts.json';
+  let postsUrl = 'https://raw.githubusercontent.com/IkoYuki/yuki-blog/master/posts.json';
   let $postsDiv = $('#posts');
 
   $.get(postsUrl)
