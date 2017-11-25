@@ -2,17 +2,17 @@
   {
     "title": "Nov.7th 2017 ",
     "content": "Hello, world. This is Yuki's blog!",
-    "picture" : "https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "
+    "picture" : ""
   },
   {
     "title": "Nov. 19th 2017 2",
     "content": "this is the second post!",
-    "picture" : "https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "
+    "picture" : ""
   },
   
   {
    "title": "Nov. 25th 2017 3",
-    "content": "this is my first time to publish the blog!"
+    "content": "this is my first time to publish the blog!",
     "picture" : "https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "
   }
 ]
