@@ -1,5 +1,4 @@
-use strict;
-
+"use strict";
 
 $(document).ready(function() {
 
