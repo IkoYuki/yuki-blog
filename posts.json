@@ -1,11 +1,13 @@
 [
   {
     "title": "Nov.7th 2017 ",
-    "content": "Hello, world. This is Yuki's blog!"
+    "content": "Hello, world. This is Yuki's blog!",
+    "picture" : "https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "
   },
   {
     "title": "Nov. 19th 2017 2",
-    "content": "this is the second post!"
+    "content": "this is the second post!",
+    "picture" : "https://www.google.co.jp/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png "
   },
   
   {
