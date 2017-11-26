@@ -39,8 +39,28 @@ $(document).ready(function() {
       });
 
 }
- let $contentDiv = $('#contentTitleId');
-   let $content = $('<h3>');   $contentTitle.text(post.contentTitIle);
-   $contentDiv.append($contentTitle);
+
+
+ let $datesUrl = 'https://raw.githubusercontent.com/IkoYuki/yuki-blog/master/posts.json';
+ let $dates = $('#postDates');
+ 
+ $.get(datesUrl)
+      .done(function(data-two) {
+ .done(function(data-two) {
+        console.log('data-two:', data-two);
+        let postDates = JSON.parse(data-two);
+        for (let date of postDates) {
+if(Month === 11){
+  return 
+}
    );
+   
+  // //function tempConvert(temp, tempType) {
+
+  //   if (tempType === "F"){
+  //       return  Math.floor((temp - 32) / 1.8);
+  //   } else if(tempType === "C") {
+  //       return  Math.floor(temp*9/5+32);
+  //   }
+}
 

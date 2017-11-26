@@ -1,9 +1,35 @@
 .containerOne {
-  width: 10%;
+  width: 15%;
   float: left;
 }
 
 .containerTwo{
-  width: 90%;
+  width: 85%;
   float: right;
+}
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  height:100%;
+}
+
+  #left {
+    overflow-y: scroll; 
+    width:15%;
+  }
+  
+  #right {
+    overflow-y: scroll;
+  }
+
+
+#left {
+  background-color: #FC6E51;
+  text-align: center;
+  height:100%;
+}
+
+#right {
+  height:100%;
 }
