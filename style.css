@@ -1,0 +1,9 @@
+.containerOne {
+  width: 10%;
+  float: left;
+}
+
+.containerTwo{
+  width: 90%;
+  float: right;
+}

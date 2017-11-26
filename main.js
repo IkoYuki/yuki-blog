@@ -9,10 +9,11 @@ $(document).ready(function() {
       .done(function(data) {
         console.log('data:', data);
         let posts = JSON.parse(data);
+        
         for (let post of posts) {
           let $post = $('<div>');
           
-          let $title = $('<h3>');
+          let $title = $('<h2>');
           $title.text(post.title);
           $post.append($title);
 
@@ -39,3 +40,4 @@ $(document).ready(function() {
       });
 
 });
+
