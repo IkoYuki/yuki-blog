@@ -9,7 +9,6 @@ $(document).ready(function() {
       .done(function(data) {
         console.log('data:', data);
         let posts = JSON.parse(data);
-        
         for (let post of posts) {
           let $post = $('<div>');
           
@@ -39,5 +38,9 @@ $(document).ready(function() {
         console.log('There was an error fetching posts:', err);
       });
 
-});
+}
+ let $contentDiv = $('#contentTitleId');
+   let $content = $('<h3>');   $contentTitle.text(post.contentTitIle);
+   $contentDiv.append($contentTitle);
+   );
 
