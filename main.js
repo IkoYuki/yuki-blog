@@ -47,56 +47,74 @@ $(function ($) {
       $selectYear = $yearLists.children('a'),
       $months     = $('.monthly-archives').children();
 
-  // 年リストのアイテム1つ分と全部表示しているときの高さ
+  // set the height of the archive buttons (single - total)
   let singleHeight = $yearLists.height(),
       totalHeight  = singleHeight * $yearLists.length;
 
-  // 年リストの最初に active というクラス名をつける
+  // add class "active" to the first year button
   $yearLists.eq(0).addClass('active');
 
-  // 年リストと年別アーカイブの最初以外を隠す
+  //hide all buttons except the first Year and Month
   $yearLists.filter(':gt(0)').hide();
   $months.filter(':gt(0)').hide();
 
-  // 年リストの高さをアイテム1つ分に
+  //set the height of Year button
   $years.css('height', singleHeight);
 
-  // 年リストにホバーしたときの動作
+  // WHen hvering on Year buttn
   $years.hover(
     function () {
-      // 年リストを全表示
+      // Show year list
       $yearLists.show();
-      // 年リストの高さを全表示分まで変更
+      // Expand the height of year button 
       $(this).stop().animate({'height': totalHeight});
     },
     function () {
-      // 年リストで active というクラスがないものは非表示に
+      // hide year buttons that aren't active
       $yearLists.filter(':not(.active)').hide();
-      // 年リストの高さをアイテム1つ分に変更
+      // stop expanding the height of year buttons
       $(this).stop().animate({'height': singleHeight});
     }
   );
 
-  // 年リストのアイテムをクリックしたときの動作
+  // events when clicking year buttons
   $selectYear.click(function (e) {
 
-    // リンクを無効にする
+    // deactivate the link
     e.preventDefault();
 
-    // 表示中のアイテムだったら何もしない
+    // if the button was already selected do nothing
     if($(this).parent().hasClass('active')) return;
 
-    // クリックした a の親 li のインデックス番号
-    var target = $(this).parent().index();
+    // the target has index number of clicked a's parent li 
+    let target = $(this).parent().index();
 
-    // active というクラス名を全体から削除
+    // remove the class active from the whole list
     $yearLists.removeClass('active');
-    // クリックした a の親 li に active というクラス名をつける
-    $(this).parent().addClass('active');
+    //add class "active" to the clicked a's parent li
+   $(this).parent().addClass('active');
 
-    // 年別アーカイブの表示しいている部分をフェードアウト
+    // fadeout the year button that is showing
     $months.filter(':not(:hidden)').fadeOut();
-    // 年リストと同じインデックス番号の年別アーカイブを表示
+    // show months that has the same index with the selected year
+    $months.eq(target).fadeIn();
+  });
+
+//want to show the article titles of the month.
+//when clicked the month
+  $selectMonths.click(function (e) {
+
+   
+    e.preventDefault();
+
+    if($(this).parent().hasClass('active')) return;
+
+      var target = $(this).parent().index();
+
+    $monthLists.removeClass('active');
+  
+      $(this).parent().addClass('active');
+
     $months.eq(target).fadeIn();
   });
 
@@ -104,37 +122,46 @@ $(function ($) {
 
 
 
-$(function(){
-    if($('#year2017').children().hasClass('Nov')) {
-        $('p').text('見つかりました');
-    } else {
-        $('p').text('見つかりませんでした');
-    }
-});
-
-function addNumber(months){ // 要素の文字色を変更する処理です。
-    var months = document.getElementById("months"); // 要素を取得します。要素が取得できなかった場合『null』が返ってきます。
-    if("months" === "nov") 
-    return months = (+1);
-}
+// $(function(){
+//     if($('#year2017').children().hasClass('Nov')) {
+//         $('p').text('見つかりました');
+//     } else {
+//         $('p').text('見つかりませんでした');
+//     }
+// });
 
 
+//   $("#months").on("click", function() {
 
-// let $datesUrl = 'https://raw.githubusercontent.com/IkoYuki/yuki-blog/master/posts.json';
-// let $dates = $('#postDates');
+
+//     function selectMonth() {
+//     let isSelected = $(this).hasClass("monthly-archives"); // photoContainerue or false;
+//     if (isSelected) {
+//       $(this).append("title");
+//     }
+//     else {
+//       $(this).addClass("selected");
+//     }
+
+//     }
+
+
+
+// // let $datesUrl = 'https://raw.githubusercontent.com/IkoYuki/yuki-blog/master/posts.json';
+// // let $dates = $('#postDates');
  
-// $.get(datesUrl)
-//       .done(function(data-two) {
-// .done(function(data-two) {
-//         console.log('data-two:', data-two);
-//         let postDates = JSON.parse(data-two);
-//         for (let date of postDates) {
-// if(Month === 11){
-//   return 
-// }
-//   );
+// // $.get(datesUrl)
+// //       .done(function(data-two) {
+// // .done(function(data-two) {
+// //         console.log('data-two:', data-two);
+// //         let postDates = JSON.parse(data-two);
+// //         for (let date of postDates) {
+// // if(Month === 11){
+// //   return 
+// // }
+// //   );
    
-  // //function tempConvert(temp, tempType) {
+//   // //function tempConvert(temp, tempType) {
 
   //   if (tempType === "F"){
   //       return  Math.floor((temp - 32) / 1.8);
