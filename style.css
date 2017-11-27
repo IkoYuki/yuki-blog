@@ -6,7 +6,7 @@
 }
 
 .containerOne {
-  width: 15%;
+  width: 150%;
   float: left;
 }
 
@@ -45,8 +45,8 @@ body, html {
 
 .archives {
   margin   : 0 auto 10px;
-  width    : 100px;
-  font-size: 40px;
+  width    : 70px;
+  font-size: 30px;
 }
 
 .archives ol {
