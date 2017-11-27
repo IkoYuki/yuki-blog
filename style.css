@@ -19,6 +19,7 @@ body, html {
   margin: 0;
   overflow: hidden;
   height:100%;
+  
 }
 
   #left {
@@ -88,7 +89,7 @@ body, html {
   float     : left;
   border    : 3px solid #fff;
   border-top: 0;
-  width     : 94px;
+  width     :;50px;
 }
 
 .year-select ul,
@@ -118,7 +119,7 @@ body, html {
   margin-left: 10px;
   border     : 3px solid #fff;
   border-top : 0;
-  width      : 200px;
+  width      : 70px;
 }
 
 .monthly-archives a {
