@@ -1,3 +1,10 @@
+
+
+
+.title{
+  background-color: #74ebd5
+}
+
 .containerOne {
   width: 15%;
   float: left;
@@ -25,11 +32,116 @@ body, html {
 
 
 #left {
-  background-color: #FC6E51;
+  background-color: #73c8a9;
   text-align: center;
   height:100%;
 }
 
 #right {
+  background-color: #4FC1E9;
+  text-align: center;
   height:100%;
+}
+
+.archives {
+  margin   : 0 auto 10px;
+  width    : 100px;
+  font-size: 40px;
+}
+
+.archives ol {
+  list-style: none;
+}
+
+/* clearfix */
+.archives:after {
+  display: block;
+  clear  : both;
+  content: "";
+}
+
+.archives a,
+.archives span {
+  display        : block;
+  line-height    : 150px;
+  text-align     : center;
+  text-decoration: none;
+}
+
+.year-select,
+.monthly-archives li {
+  border-radius: 0 0 10px 10px;
+}
+
+.year-select ol,
+.monthly-archives a,
+.monthly-archives span {
+  border-radius: 0 0 8px 8px;
+}
+
+.year-select,
+.monthly-archives li {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.year-select {
+  float     : left;
+  border    : 3px solid #fff;
+  border-top: 0;
+  width     : 94px;
+}
+
+.year-select ul,
+.monthly-archives a {
+  background-image: linear-gradient(to bottom, #74ebd5, #acb6e5);
+}
+
+.year-select ol {
+  background-color: blue;
+  text-shadow     : 0 0 0 transparent, /* Windows Chrome 対策 */
+                    -1px -1px 0 rgba(0, 0, 0, 0.2);
+}
+
+.year-select a {
+  color: rgba(0, 0, 0, 0.5);
+}
+.year-select ul a:hover {
+  color: #fff;
+}
+
+
+.monthly-archives ol {
+  position: absolute;
+}
+
+.monthly-archives li {
+  margin-left: 10px;
+  border     : 3px solid #fff;
+  border-top : 0;
+  width      : 200px;
+}
+
+.monthly-archives a {
+  color           : #fff;
+  background-color: #268bd2;
+  text-shadow     : 0 0 0 transparent,
+                    -1px -1px 0 rgba(0, 0, 0, 0.2);
+  transition      : all 0.2s;
+}
+
+.monthly-archives a:hover {
+  padding-top     : 10px;
+  background-color: #cb4b16;
+}
+
+.monthly-archives span {
+  color           : #bbb;
+  background-color: #f0f0f0;
+  background-image: linear-gradient(
+                      top,
+                      transparent,
+                      rgba(0, 0, 0, 0.08)
+                    );
+  text-shadow     : 0 0 0 transparent,
+                    1px 1px 0 #fff;
 }
