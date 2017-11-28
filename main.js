@@ -135,9 +135,9 @@ $(function ($) {
   
       $(this).parent().addClass('active');
        
-       let months = $(this).attr('Nov');
+       let months = $(this).attr($months);
     
-        if(typeof menuName == 'Nov'){
+        if(typeof months == 'Nov'){
         
             console.log($title);
              $post.append($title);
