@@ -24,6 +24,9 @@ $(document).ready(function() {
           $picture.attr("src",post.picture);
           $post.append($picture);
           
+          let $months = $('<h6>');
+          $months.text(post.months);
+          
 // //IkoYuki [4:20 PM] 
 // $pictureContainer.atphotoContainer("src", $("#PhotoURL").val());
 //   let $row = $("#manyPictures");
@@ -117,8 +120,34 @@ $(function ($) {
 
     $months.eq(target).fadeIn();
   });
+  
+  
+   $selectTitles.click(function (e) {
 
-});;
+   
+    e.preventDefault();
+
+    if($(this).parent().hasClass('active')) return;
+
+      var target = $(this).parent().index();
+
+    $titleLists.removeClass('active');
+  
+      $(this).parent().addClass('active');
+       
+       let months = $(this).attr('Nov');
+    
+        if(typeof menuName == 'Nov'){
+        
+            console.log($title);
+             $post.append($title);
+        
+        }else {
+            console.log('');
+        }
+  });
+
+});
 
 
 
